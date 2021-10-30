@@ -1,0 +1,215 @@
+title: Tube
+pages: false
+fields:
+	autoid:
+		label: Auto ID
+		type: text
+		readonly: true
+		width: 1/2
+	title:
+		label: Title
+		type:  text
+		width: 1
+	tube_number:
+		label: Tube Number
+		type:  tags
+		width: 1
+	brand:
+		label: Brand on Tube
+		type:  tags
+		width: 1/2
+	brand_extended:
+		label: Extended Brand Name
+		type:  text
+		width: 1/2
+	manufacturer:
+		label: Real Tube Manufacturer
+		type:  tags
+		width: 1/2
+	manufacturer_extended:
+		label: Extended Manufacturer Name
+		type:  text
+		width: 1/2
+	factory_code:
+		label: Factory Code
+		type:  Select
+		options: query
+		query:
+			page: companies
+			fetch: pages
+			template: factory
+			value: '{{title}}'
+			text: '{{title}}'
+		width: 1/1
+	country:
+		label: Country
+		type:  Select
+		width: 1/3
+		options: query
+		query:
+			page: tubes
+			fetch: children
+			template: tube
+			value: '{{country}}'
+			text: '{{country}}'
+	code_on_tube:
+		label: Etched code on tube
+		type:  text
+		width: 1/3
+	year:
+		label: Year
+		type:  text
+		width: 1/3
+	other_marks:
+		label: Other Marks
+		type: text
+	line-c:
+		type: line
+	bottle_height:
+		label: Bottle Height
+		type: select
+		options:
+			Short: Short Bottle
+			Half: Half Bottle
+			Tall Bottle: Tall Bottle
+		width: 1/3
+	tip_shape:
+		label: Tip Shape
+		type: select
+		default: Pinched Tip
+		options:
+			Cathode Connector: Cathode Connector
+			Dimped Tip: Dimped Tip
+			Pinched Waist: Pinched Waist
+			Pinched Tip: Pinched Tip
+			Round Tip: Round Tip
+		width: 1/3
+	bottle_shape:
+		label: Bottle Shape
+		type: select
+		options:
+			Coke Bottle: Coke Bottle
+			Fat Bottle: Fat Bottle
+			Skinny Bottle: Skinny Bottle
+		width: 1/3
+	glass_color:
+		label: Glass Color
+		type: select
+		default: Clear Glass
+		options:
+			Black: Black Glass
+			Clear Glass: Clear Glass
+			Grey: Grey Glass
+			Smoked: Smoked Glass
+		width: 1/3
+	mica:
+		label: Mica
+		type: select
+		default: Double Mica
+		options:
+			Double: Double Mica
+			Triple: Triple Mica
+			Double Ceramic Spacer: Double Ceramic Spacer
+		width: 1/3
+	getter:
+		label: Getter
+		type: select
+		options: query
+		query:
+			page: tubes
+			fetch: children
+			template: tube
+			value: '{{getter}}'
+			text: '{{getter}}'
+		width: 1/3
+	getter_support:
+		label: Getter Support
+		type: select
+		options:
+			One: One Support
+			Double: Double Support
+			Mouse Ears: Mouse Ears
+		width: 1/3
+	plate_look:
+		label: Plate / Anode Look
+		type: select
+		options: query
+		query:
+			page: tubes
+			fetch: children
+			template: tube
+			value: '{{plate_look}}'
+			text: '{{plate_look}}'
+		width: 1/3
+	plate_size:
+		label: Plate / Anode Size
+		type: select
+		options:
+			20mm: 20mm Long
+			17mm: 17mm Long
+			14mm: 14mm Short
+			10mm: 10mm Short
+		width: 1/3
+	plate_color:
+		label: Plate / Anode Color
+		type: select
+		options: query
+		query:
+			page: tubes
+			fetch: children
+			template: tube
+			value: '{{plate_color}}'
+			text: '{{plate_color}}'
+		width: 1/3
+	pin_color:
+		label: Pin Color
+		type: select
+		default: Silver Pins
+		options:
+			Gold: Gold Pins
+			Silver: Silver Pins
+		width: 1/3
+	base:
+		label: Base
+		type: select
+		options:
+			Black: Black
+			Black Short Base: Black Short Base
+			Dark Brown: Dark Brown
+			Brown: Brown
+			Coin Base: Coin Base
+			Light Brown: Light Brown
+			Red: Red
+			Silver Metal: Silver Metal
+		width: 1/3
+	line-d:
+		type: line
+	special_use:
+		label: Special Use
+		type:  select
+		width: 1/3
+		options: query
+		query:
+			page: tubes
+			fetch: children
+			template: tube
+			value: '{{special_use}}'
+			text: '{{special_use}}'
+	fake:
+		label: Fake
+		text: Tick this box if you think the tube is a fake.
+		type: checkbox
+		width: 2/3
+	notes:
+		label: Notes
+		type: textarea
+	line-e:
+		type: line
+	uploader_name:
+		label: Your Name
+		type: text
+		width: 1/3
+	uploader_email:
+		label: Your Email
+		type: text
+		width: 1/3

@@ -1,0 +1,105 @@
+title: Tube Tester
+pages: false
+fields:
+	autoid:
+		label: Auto ID
+		type: text
+		readonly: true
+		width: 1/2
+	title:
+		label: Title
+		type:  text
+		width: 1
+	line-a:
+		type: line
+	brand:
+		label: Brand / Manufacturer
+		type:  tags
+		width: 1/2
+	brand_extended:
+		label: Extended Brand / Manufacturer Name
+		type:  text
+		width: 1/2
+	model:
+		label: Model
+		type:  text
+		width: 1/4
+	year:
+		label: Year
+		type:  text
+		width: 1/4
+	country:
+		label: Country
+		type:  Select
+		width: 1/2
+		options: query
+		query:
+			page: testers
+			fetch: children
+			template: tester
+			value: '{{country}}'
+			text: '{{country}}'
+	city:
+		label: City / Factory
+		type:  text
+		width: 1/2
+	line-c:
+		type: line
+	type_b:
+		label: Tube / Solid State
+		type:  select
+		width: 1
+		default: Tube
+		options:
+			Tube: Tube
+			Solid State: Solid State
+	type:
+		label: Type
+		type:  radio
+		width: 1
+		default: Dynamic Mutual Conductance
+		options:
+			Emissions Type Tester: Emissions Type Tester
+			Dynamic Mutual Conductance: Dynamic Mutual Conductance
+	scale:
+		label: Scale
+		type:  checkboxes
+		width: 1
+		options:
+			0-100: 0 - 100
+			600 Micromhos: 600 Micromhos
+			1500 Micromhos: 1500 Micromhos
+			3000 Micromhos: 3000 Micromhos
+			5000 Micromhos: 5000 Micromhos
+			6000 Micromhos: 6000 Micromhos
+			15000 Micromhos: 15000 Micromhos
+			25000 Micromhos: 25000 Micromhos
+			30000 Micromhos: 30000 Micromhos
+			60000 Micromhos: 60000 Micromhos
+	tests:
+		label: Tests
+		type:  checkboxes
+		width: 1
+		options:
+			Conductance Gm: Conductance (Gm)
+			Gas: Gas
+			Leakage: Leakage
+			Plate Current: Plate Current
+			Shorts: Shorts
+			Tube Life: Tube Life
+	special_use:
+		label: Special Use
+		type:  select
+		width: 2/3
+		options:
+			Laboratory: Laboratory
+			Military: Military
+			JAN - USA Joint Army Navy: Military - Joint Army Navy (JAN)
+			USASC United States Army Signal Corps: USASC United States Army Signal Corps
+			Air Force: Air Force
+	line-d:
+		type: line
+	notes:
+		label: Notes
+		type:  textarea
+		width: 1

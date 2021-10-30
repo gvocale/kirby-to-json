@@ -1,0 +1,83 @@
+title: Company
+pages:
+	num: zero
+	template: Factory
+fields:
+	autoid:
+		label: Auto ID
+		type: text
+		readonly: true
+		width: 1/2
+	title:
+		label: Title
+		type:  text
+		width: 1
+	line-a:
+		type: line
+	name:
+		label: Name
+		type:  tags
+		width: 1/2
+	extended_name:
+		label: Extended Name
+		type:  text
+		width: 1/2
+	associated_brands:
+		label: Associated Brands
+		type:  tags
+		width: 1/3
+	associated_company:
+		label: Associated Company
+		type:  tags
+		width: 1/3
+	printed_brands:
+		label: Printed Brands
+		type:  tags
+		width: 1
+	line-b:
+		type: line
+	founded_by:
+		label: Founded by
+		type:  text
+		width: 1/3
+	year:
+		label: Year of Opening
+		type:  text
+		width: 1/3
+	year_closing:
+		label: Year of Closing
+		type:  text
+		width: 1/3
+	city:
+		label: City
+		type:  text
+		width: 1/3
+	country:
+		label: Country
+		type:  tags
+		width: 1/3
+	line-c:
+		type: line
+	text:
+		label: Text
+		type:  textarea
+		width: 1
+	line-d:
+		type: line
+	notes:
+		label: Notes
+		type: textarea
+	line-e:
+		type: line
+	source:
+		label: Source
+		type: textarea
+		width: 1
+	uploader_name:
+		label: Your Name
+		type: text
+		width: 1/3
+	uploader_email:
+		label: Your Email
+		type: text
+		width: 1/3
