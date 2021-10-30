@@ -48,6 +48,7 @@ Icon
 # ---------------
 
 /site/config/.license
-content/companies
-content/tester
-content/tubes
+content
+!content/error
+!content/run
+!content/home
