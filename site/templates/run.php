@@ -17,6 +17,10 @@ foreach ($pages->children() as $page) {
     }
   }
 
+  $json['is_published'] = $page->isPublished();
+  $json['slug'] = $page->slug();
+  $json['template'] = $page->template()->name();
+
   $json_data = json_encode($json, JSON_PRETTY_PRINT);
 
   $filename = $page->root() . '/index.json';

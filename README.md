@@ -9,7 +9,7 @@ I will then use these json in Gatsby to access the data, rather then Kirby's ori
 If you want to use PHP's built-in server, you have to start it up with Kirby's router:
 
 ```sh
-php -S localhost:8000 kirby/router.php
+php -S localhost:8080 kirby/router.php
 ```
 
 ### Run
